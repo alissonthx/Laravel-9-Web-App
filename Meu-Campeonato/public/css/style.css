@@ -3,10 +3,14 @@ body{
 }
 .m{
     display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
 }
 footer{
     bottom: 1rem;
     position: fixed;
-    width: 90%;
+    width: 100%;
     text-align: center;
 }

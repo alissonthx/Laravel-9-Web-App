@@ -18,6 +18,23 @@
 </head>
 
 <body>
+    <header>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Classificação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ranking</a>
+            </li>
+        </ul>
+        <div class="m">
+            <img style="max-width: 60px;" src="/img/trophy.png" alt="">
+            <h1>Meu Campeonato</h1>
+        </div>
+    </header>
     @yield('content')
     <footer>Made it by Álisson Marques &copy;</footer>
 </body>
