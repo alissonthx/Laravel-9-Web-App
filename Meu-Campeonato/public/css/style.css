@@ -1,0 +1,12 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.m{
+    display: flex;
+}
+footer{
+    bottom: 1rem;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+}
