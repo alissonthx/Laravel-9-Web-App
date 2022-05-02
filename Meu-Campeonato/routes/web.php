@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/classification', function () {
+    return view('classification');
+});
+Route::get('/rank', function () {
+    return view('rank');
+});

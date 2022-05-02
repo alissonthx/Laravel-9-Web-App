@@ -19,17 +19,19 @@
 
 <body>
     <header>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Início</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Classificação</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Ranking</a>
-            </li>
-        </ul>
+        <nav class="navbar">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/classification">Classificação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rank">Ranking</a>
+                </li>
+            </ul>
+        </nav>
         <div class="m">
             <img style="max-width: 60px;" src="/img/trophy.png" alt="">
             <h1>Meu Campeonato</h1>
