@@ -56,14 +56,18 @@ php artisan serve
 ```
   
 <h2>Criando Controllers</h2>
-<p>Para criar os controllers de classificação e ranking execute:</p>
+<p>Para criar os controllers de estatísticas, classificação e partidas execute:</p>
 
 ```
-php artisan make:controller ClassificationController
+php artisan make:controller StandingsController
 ```
 
 ```
-php artisan make:controller RankController
+php artisan make:controller ClassificationsController
+```
+
+```
+php artisan make:controller GamesController
 ```
 <h2>Criando Migrations</h2>
 <p>Para criar a migration referente aos times execute:</p>
@@ -76,4 +80,19 @@ php artisan make:migration create_teams_table
 
 ```
 php artisan migrate
+```
+
+<h2>Criando Controllers</h2>
+<p>Para criar os models de estatística, classificação e partida execute:</p>
+
+```
+php artisan make:model Standing
+```
+
+```
+php artisan make:model Classification
+```
+
+```
+php artisan make:model Game
 ```
