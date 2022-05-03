@@ -82,7 +82,7 @@ php artisan make:migration create_teams_table
 php artisan migrate
 ```
 
-<h2>Criando Controllers</h2>
+<h2>Criando Models</h2>
 <p>Para criar os models de estatística, classificação e partida execute:</p>
 
 ```
