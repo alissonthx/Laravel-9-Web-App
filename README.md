@@ -38,3 +38,34 @@ print(random.randrange(0, 8, 1))
 ```
 <p>O back-end deve executar o script acima, capturar seu output e utilizá-lo como
 resultado de cada uma das partidas.<p>
+
+<h2>Criando Aplicação em Laravel 9</h2>
+<p>Para criar a nossa aplicação Meu-campeonato, com composer instalado em sua máquina, execute:</p>
+
+```
+composer create-project laravel/laravel Meu-campeonato
+```
+
+<h2>Iniciando a Aplicação</h2>
+<p>Para iniciar a aplicação em localhost, execute:</p>
+
+```
+php artisan serve
+```
+  
+<h2>Criando Controllers</h2>
+<p>Para criar os controllers de classificação e ranking execute:</p>
+
+```
+php artisan make:controller ClassificationController
+```
+
+```
+php artisan make:controller RankController
+```
+<h2>Criando Migrations</h2>
+<p>Para criar a migration referente aos times execute:</p>
+
+```
+php artisan make:migration create_teams_table
+```
