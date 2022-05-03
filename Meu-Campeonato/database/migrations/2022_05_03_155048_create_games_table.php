@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('home_team_id');
+            $table->unsignedBigInteger('away_team_id');
+            $table->unsignedBigInteger('winner_id');
+            $table->unsignedBigInteger('loser_id');
+            $table->unsignedBigInteger('winner_score');
+            $table->unsignedBigInteger('loser_score');
             $table->timestamps();
         });
     }
