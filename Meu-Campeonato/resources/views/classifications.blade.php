@@ -3,3 +3,5 @@
 @section('title', 'Classificação')
 
 @section('content')
+
+@endsection

@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('standings');
 });
-Route::get('/classification', function () {
-    return view('classification');
+Route::get('/classificacao', function () {
+    return view('classifications');
 });
-Route::get('/rank', function () {
-    return view('rank');
+Route::get('/partidas', function () {
+    return view('games');
 });
