@@ -24,6 +24,7 @@ campeonato;</li>
 primeiro no campeonato;</li>
 <li>o placar de cada jogo pode ser gerado randomicamente pelo back-end ou por
 uma rotina em Python, como detalhado no tópico a seguir.</li>
+</ul>
 <h2>Placar do jogo</h2>
 <p>O placar de cada jogo pode ser gerado por uma rotina em Python, com o código
 apresentado abaixo.<p>
@@ -39,6 +40,7 @@ print(random.randrange(0, 8, 1))
 <p>O back-end deve executar o script acima, capturar seu output e utilizá-lo como
 resultado de cada uma das partidas.<p>
 
+<h1>Setup Inicial</h1>
 <h2>Criando Aplicação em Laravel 9</h2>
 <p>Para criar a nossa aplicação Meu-campeonato, com composer instalado em sua máquina, execute:</p>
 
