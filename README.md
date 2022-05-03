@@ -71,3 +71,9 @@ php artisan make:controller RankController
 ```
 php artisan make:migration create_teams_table
 ```
+
+<p>Após montar as migrations, para executar a criação no banco, execute:</p>
+
+```
+php artisan migrate
+```
