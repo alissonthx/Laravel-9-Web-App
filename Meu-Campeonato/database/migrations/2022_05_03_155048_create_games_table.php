@@ -21,6 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('loser_id');
             $table->unsignedBigInteger('winner_score');
             $table->unsignedBigInteger('loser_score');
+            $table->unsignedBigInteger('rounds');
             $table->timestamps();
         });
     }

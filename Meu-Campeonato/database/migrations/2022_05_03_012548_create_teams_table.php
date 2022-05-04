@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->bigInteger('score')->default(0);
+            $table->bigInteger('goals')->default(0);
+            $table->bigInteger('victories')->default(0);
+            $table->bigInteger('loses')->default(0);
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
