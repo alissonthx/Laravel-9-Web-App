@@ -8,6 +8,7 @@
 
     <div class="row text-center mt-3">
         <h2>Quartas de Final</h2>
+
     </div>
     <div class="row d-flex justify-content-center">
         <div class="col-sm-3">
