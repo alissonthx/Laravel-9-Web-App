@@ -22,13 +22,13 @@
         <nav class="navbar">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Início</a>
+                    <a class="nav-link active" aria-current="page" href="/">Estatísticas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/classification">Classificação</a>
+                    <a class="nav-link" href="/classificacao">Classificação</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/rank">Ranking</a>
+                    <a class="nav-link" href="/partidas">Partidas</a>
                 </li>
             </ul>
         </nav>

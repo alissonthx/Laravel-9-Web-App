@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\ClassificationsController;
+use App\Http\Controllers\GamesController;
+use App\Http\Controllers\StandingsController;
+use App\Http\Controllers\TeamsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/classification', function () {
-    return view('classification');
-});
-Route::get('/rank', function () {
-    return view('rank');
-});
+// Route::get('/teams', [TeamsController::class, 'index']);
+Route::get('/', [StandingsController::class, 'index']);
+Route::get('/classificacao', [ClassificationsController::class, 'index']);
+Route::get('/partidas', [GamesController::class, 'index']);
