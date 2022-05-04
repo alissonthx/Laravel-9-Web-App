@@ -4,4 +4,9 @@
 
 @section('content')
 
+<!-- @foreach ($teams as $team)
+
+
+@endforeach -->
+
 @endsection
