@@ -8,6 +8,11 @@ use App\Models\Team;
 
 class TeamsController extends Controller
 {
+    public function index()
+    {
+        return view('teams');
+    }
+
     public function store(Request $request)
     {
         $team = new Team();

@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/teams', [TeamsController::class, 'index']);
 Route::post('/teams', [TeamsController::class, 'store']);
-Route::get('/', [StandingsController::class, 'index']);
+Route::get('/', [TeamsController::class, 'index']);
+Route::get('/estatisticas', [StandingsController::class, 'index']);
 Route::get('/classificacao', [ClassificationsController::class, 'index']);
 Route::get('/partidas', [GamesController::class, 'index']);
