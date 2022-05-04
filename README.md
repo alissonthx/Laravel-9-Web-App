@@ -83,14 +83,10 @@ $ php artisan migrate
 ```
 
 <h2>Criando Models</h2>
-Para criar os models de estatística, classificação e partida execute:
+Para criar os models de partida e partida, execute:
 
 ```
-$ php artisan make:model Standing
-```
-
-```
-$ php artisan make:model Classification
+$ php artisan make:model Team
 ```
 
 ```
