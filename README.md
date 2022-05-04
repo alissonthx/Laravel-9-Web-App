@@ -24,6 +24,7 @@ campeonato;</li>
 primeiro no campeonato;</li>
 <li>o placar de cada jogo pode ser gerado randomicamente pelo back-end ou por
 uma rotina em Python, como detalhado no tópico a seguir.</li>
+</ul>
 <h2>Placar do jogo</h2>
 <p>O placar de cada jogo pode ser gerado por uma rotina em Python, com o código
 apresentado abaixo.<p>
@@ -38,3 +39,83 @@ print(random.randrange(0, 8, 1))
 ```
 <p>O back-end deve executar o script acima, capturar seu output e utilizá-lo como
 resultado de cada uma das partidas.<p>
+
+<h1>Setup Inicial</h1>
+<h2>Criando Aplicação em Laravel 9</h2>
+
+```bash
+# Para criar a nossa aplicação Meu-campeonato, com composer instalado em sua máquina, execute:
+$ composer create-project laravel/laravel Meu-campeonato
+```
+
+<h2>Iniciando a Aplicação</h2>
+
+```bash
+# Para iniciar a aplicação em localhost, execute:
+php artisan serve
+```
+  
+<h2>Criando Controllers</h2>
+
+```bash
+# Para criar os controllers de estatísticas, classificação e partidas execute:
+$ php artisan make:controller StandingsController
+```
+
+```bash
+$ php artisan make:controller ClassificationsController
+```
+
+```bash
+$ php artisan make:controller GamesController
+```
+<h2>Criando Migrations</h2>
+
+```bash
+# Para criar a migration referente aos times execute:
+$ php artisan make:migration create_teams_table
+```
+
+
+```bash
+# Após montar as migrations, para executar a criação no banco, execute:
+$ php artisan migrate
+```
+
+<h2>Criando Models</h2>
+Para criar os models de partida e partida, execute:
+
+```
+$ php artisan make:model Team
+```
+
+```
+$ php artisan make:model Game
+```
+
+<h2>Criando Table Seeder</h2>
+
+```bash
+# Para criar o table seeder, execute:
+$ php artisan make:seeder TeamsTableSeeder
+```
+
+<h1>Como Rodar o Projeto</h1>
+
+
+```bash
+# Criando as tabelas no banco MySql:
+$ php artisan migrate
+```
+
+
+``` bash
+# Criando times na tabela do banco MySql:
+$ php artisan db:seed
+```
+
+```bash
+# Iniciando o Projeto
+$ php artisan serve
+```
+
