@@ -6,6 +6,7 @@ use App\Models\Championship;
 use App\Models\Game;
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class ChampionshipsController extends Controller
 {
@@ -63,7 +64,8 @@ class ChampionshipsController extends Controller
         $teams[] = Team::create(['name' => $request->name_7]);
         $teams[] = Team::create(['name' => $request->name_8]);
 
-        // Create new games in championships in random mode
+        // ============================================================
+        // Generate new games in championships randomly
         srand(microtime(true));
         shuffle($teams);
 
@@ -79,6 +81,7 @@ class ChampionshipsController extends Controller
             }
         }
 
+        // ============================================================
         // Calculate quarterfinals results
         foreach ($championship->games as $game) {
             if ($game->round == 'QF') {
@@ -88,35 +91,35 @@ class ChampionshipsController extends Controller
                 if ($homeScore > $awayScore) { // Home team wins
                     $game->winner_score = $homeScore;
                     $game->loser_score = $awayScore;
-                    $game->winner_team_id = $game->home_team_id;
-                    $game->loser_team_id = $game->away_team_id;
+                    $game->winner_id = $game->home_team_id;
+                    $game->loser_id = $game->away_team_id;
                 } elseif ($awayScore > $homeScore) { // Away team wins
                     $game->winner_score = $awayScore;
                     $game->loser_score = $homeScore;
-                    $game->winner_team_id = $game->away_team_id;
-                    $game->loser_team_id = $game->home_team_id;
+                    $game->winner_id = $game->away_team_id;
+                    $game->loser_id = $game->home_team_id;
                 } else { // Draw
                     $game->winner_score = $homeScore;
                     $game->loser_score = $awayScore;
                     if ($game->home_team_id < $game->away_team_id) { // Home team wins
-                        $game->winner_team_id = $game->home_team_id;
-                        $game->loser_team_id = $game->away_team_id;
+                        $game->winner_id = $game->home_team_id;
+                        $game->loser_id = $game->away_team_id;
                     } else { // Away team wins
-                        $game->winner_team_id = $game->away_team_id;
-                        $game->loser_team_id = $game->home_team_id;
+                        $game->winner_id = $game->away_team_id;
+                        $game->loser_id = $game->home_team_id;
                     }
                 }
+                $game->save();
             }
         }
 
+        // ============================================================
         // Generate the new SF (semifinals) round Games
 
 
-        // $games = Game::where('championship_id', $championship->id)->where('round', 'QF')->get();
-        // foreach ($games as $game) {
-        //     $game->round = 'SF';
-        //     $game->save();
-        // }
+        // ============================================================
+        // Generate the new F (finals) round Games
+
 
         return redirect()->route('games');
     }
