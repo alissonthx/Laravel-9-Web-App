@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('championships', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
-            $table->unsignedBigInteger('first_winner_id');
-            $table->unsignedBigInteger('second_winner_id');
+            $table->string('description')->nullable();
+            $table->unsignedBigInteger('first_winner_id')->nullable();
+            $table->unsignedBigInteger('second_winner_id')->nullable();
+            $table->unsignedBigInteger('third_winner_id')->nullable();
             $table->timestamps();
         });
     }

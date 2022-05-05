@@ -21,9 +21,4 @@ class TeamsController extends Controller
 
         return redirect('/games');
     }
-
-    public function show($id)
-    {
-        $team = Team::findOrFail($id);
-    }
 }
