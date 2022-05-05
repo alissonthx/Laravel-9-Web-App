@@ -20,6 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger('first_winner_id')->nullable();
             $table->unsignedBigInteger('second_winner_id')->nullable();
             $table->unsignedBigInteger('third_winner_id')->nullable();
+            $table->unsignedBigInteger('QF_winners')->nullable();
+            $table->unsignedBigInteger('SF_winners')->nullable();
+            $table->unsignedBigInteger('F_winners')->nullable();
             $table->timestamps();
         });
     }

@@ -93,22 +93,27 @@ class ChampionshipsController extends Controller
                     $game->loser_score = $awayScore;
                     $game->winner_id = $game->home_team_id;
                     $game->loser_id = $game->away_team_id;
+                    // $game->QF_winners = $game->home_team_id;
                 } elseif ($awayScore > $homeScore) { // Away team wins
                     $game->winner_score = $awayScore;
                     $game->loser_score = $homeScore;
                     $game->winner_id = $game->away_team_id;
                     $game->loser_id = $game->home_team_id;
+                    // $game->QF_winners = $game->away_team_id;
                 } else { // Draw
                     $game->winner_score = $homeScore;
                     $game->loser_score = $awayScore;
                     if ($game->home_team_id < $game->away_team_id) { // Home team wins
                         $game->winner_id = $game->home_team_id;
                         $game->loser_id = $game->away_team_id;
+                        // $game->QF_winners = $game->home_team_id;
                     } else { // Away team wins
                         $game->winner_id = $game->away_team_id;
                         $game->loser_id = $game->home_team_id;
+                        // $game->QF_winners = $game->away_team_id;
                     }
                 }
+
                 $game->save();
             }
         }
