@@ -10,7 +10,7 @@ class TeamsController extends Controller
 {
     public function index()
     {
-        return view('teams');
+        return view('index');
     }
 
     public function store(Request $request)
@@ -20,5 +20,10 @@ class TeamsController extends Controller
         $team->save();
 
         return redirect('/games');
+    }
+
+    public function show($id)
+    {
+        $team = Team::findOrFail($id);
     }
 }
