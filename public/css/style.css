@@ -16,9 +16,9 @@ table{
 }
 
 .card{
-    text-align: center;    
+    text-align: center;
     margin: 1rem;
-    padding: 15px;    
+    padding: 5px;
 }
 
 .m{
@@ -32,5 +32,5 @@ table{
 .nav{
     width: 100%;
     padding: 10px;
-    margin-left: 20px;    
+    margin-left: 20px;
 }

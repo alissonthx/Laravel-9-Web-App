@@ -34,4 +34,24 @@ class Game extends Model
     {
         return $this->belongsTo(Team::class, 'away_team_id');
     }
+
+    // public function winner()
+    // {
+    //     return $this->belongsTo(Team::class, 'winner_id');
+    // }
+
+    // public function loser()
+    // {
+    //     return $this->belongsTo(Team::class, 'loser_id');
+    // }
+
+    // public function getWinnerScoreAttribute($value)
+    // {
+    //     return $value ?: 0;
+    // }
+
+    // public function getLoserScoreAttribute($value)
+    // {
+    //     return $value ?: 0;
+    // }
 }
