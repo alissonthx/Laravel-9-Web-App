@@ -41,10 +41,13 @@ print(random.randrange(0, 8, 1))
 resultado de cada uma das partidas.<p>
 
 <h1>Setup Inicial</h1>
-<h2>Criando Aplicação em Laravel 9</h2>
+
+- Criar banco MysQl: db_meucampeonato
+
+- Criando Aplicação em Laravel 9
 
 ```bash
-# Para criar a nossa aplicação Meu-campeonato, com composer instalado em sua máquina, execute:
+# Para criar a nossa aplicação de nome Meu-campeonato, com composer instalado em sua máquina, execute:
 $ composer create-project laravel/laravel Meu-campeonato
 ```
 
@@ -69,13 +72,18 @@ $ php artisan make:controller ClassificationsController
 ```bash
 $ php artisan make:controller GamesController
 ```
+
+```bash
+# Controller já com pré-definições de 'CRUD' do laravel
+$ php artisan make:controller ChampionshipsController --resource
+```
+
 <h2>Criando Migrations</h2>
 
 ```bash
 # Para criar a migration referente aos times execute:
 $ php artisan make:migration create_teams_table
 ```
-
 
 ```bash
 # Após montar as migrations, para executar a criação no banco, execute:
@@ -102,7 +110,6 @@ $ php artisan make:seeder TeamsTableSeeder
 
 <h1>Como Rodar o Projeto</h1>
 
-
 ```bash
 # Criando as tabelas no banco MySql:
 $ php artisan migrate
@@ -110,7 +117,7 @@ $ php artisan migrate
 
 
 ``` bash
-# Criando times na tabela do banco MySql:
+# Caso queira criar times na tabela do banco MySql, sem precisar inserir manualmente no formulário, execute:
 $ php artisan db:seed
 ```
 
@@ -118,4 +125,5 @@ $ php artisan db:seed
 # Iniciando o Projeto
 $ php artisan serve
 ```
+
 
