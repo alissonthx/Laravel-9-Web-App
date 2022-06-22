@@ -47,8 +47,8 @@ resultado de cada uma das partidas.<p>
 - Criando Aplicação em Laravel 9
 
 ```bash
-# Para criar a nossa aplicação de nome Meu-campeonato, com composer instalado em sua máquina, execute:
-$ composer create-project laravel/laravel Meu-campeonato
+# Para criar a nossa aplicação, com composer instalado em sua máquina, execute:
+$ composer create-project laravel/laravel Nome-Aplicação
 ```
 
 <h2>Iniciando a Aplicação</h2>
@@ -61,28 +61,20 @@ php artisan serve
 <h2>Criando Controllers</h2>
 
 ```bash
-# Para criar os controllers de estatísticas, classificação e partidas execute:
-$ php artisan make:controller StandingsController
-```
-
-```bash
-$ php artisan make:controller ClassificationsController
-```
-
-```bash
-$ php artisan make:controller GamesController
+# Para criar os controllers execute, alterando campo "Nome" para o desejado:
+$ php artisan make:controller NomeController
 ```
 
 ```bash
 # Controller já com pré-definições de 'CRUD' do laravel
-$ php artisan make:controller ChampionshipsController --resource
+$ php artisan make:controller NomeController --resource
 ```
 
 <h2>Criando Migrations</h2>
 
 ```bash
-# Para criar a migration referente aos times execute:
-$ php artisan make:migration create_teams_table
+# Para criar as migrations execute, alterando campo "Nome" para o desejado:
+$ php artisan make:migration create_nome_table
 ```
 
 ```bash
@@ -94,11 +86,7 @@ $ php artisan migrate
 Para criar os models de partida e partida, execute:
 
 ```
-$ php artisan make:model Team
-```
-
-```
-$ php artisan make:model Game
+$ php artisan make:model Nome
 ```
 
 <h2>Criando Table Seeder</h2>
